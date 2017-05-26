@@ -17,6 +17,7 @@ public class DetailActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        // 클릭이벤트
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -24,11 +25,14 @@ public class DetailActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        // 롱클릭이벤트
         fab.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
                 Snackbar.make(v, "Cancel", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                // 클릭과 롱클릭을 모두 사용할 경우
+                // 리턴값이 false 이면 롱클릭후에 클릭이 호출된다.
                 return true;
             }
         });
