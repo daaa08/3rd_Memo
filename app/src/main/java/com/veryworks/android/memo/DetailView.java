@@ -4,6 +4,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by pc on 5/29/2017.
@@ -35,7 +36,13 @@ public class DetailView {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                activity.save();
+                String content = memo.getText().toString();
+                if(content != null && !"".equals(content)){
+                    activity.save(content);
+                } else {
+                    Toast.makeText(activity, "내용을 입력하세요", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
         button.setOnLongClickListener(new View.OnLongClickListener() {
@@ -45,5 +52,9 @@ public class DetailView {
                 return true;
             }
         });
+    }
+
+    public void setMemo(String content) {
+        memo.setText(content);
     }
 }
