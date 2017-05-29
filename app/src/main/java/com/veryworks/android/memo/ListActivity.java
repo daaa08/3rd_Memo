@@ -9,7 +9,6 @@ import android.view.View;
 
 /*
   자주 사용되는 기능 알아보기
-
   1. Activity 갤러리 사용하기
     가. Basic Activity
       new > Activity > Gallery... 에서 선택
@@ -51,9 +50,7 @@ import android.view.View;
 
   3. 파일읽기 쓰기
     가. FileWriter
-
     나. FileReader
-
  */
 
 public class ListActivity extends AppCompatActivity {
