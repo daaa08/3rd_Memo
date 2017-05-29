@@ -10,8 +10,6 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
-
         // 뷰를 분리한다
         detailView = new DetailView(this);
         // 뷰를 초기화한다.

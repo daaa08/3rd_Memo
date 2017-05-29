@@ -22,6 +22,8 @@ public class DetailView {
     }
 
     public void init(){
+        activity.setContentView(R.layout.activity_detail);
+
         toolbar = (Toolbar) activity.findViewById(R.id.toolbar);
         activity.setSupportActionBar(toolbar);
 
