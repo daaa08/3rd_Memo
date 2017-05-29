@@ -8,12 +8,13 @@ public class DetailActivity extends AppCompatActivity {
     String id = "파일명.txt";
     String memo = "메모내용";
 
+    DetailView detailView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-
-        DetailView detailView = new DetailView(this);
+        detailView = new DetailView(this);
     }
 
     // 저장
