@@ -5,16 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 public class DetailActivity extends AppCompatActivity {
-    String id = "파일명.txt";
-    String memo = "메모내용";
-
     DetailView detailView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+
+        // 뷰를 분리한다
         detailView = new DetailView(this);
+        // 뷰를 초기화한다.
+        detailView.init();
     }
 
     // 저장

@@ -8,22 +8,24 @@ import android.widget.EditText;
 /**
  * Created by pc on 5/29/2017.
  */
-
 public class DetailView {
-
-    EditText memo;
-    FloatingActionButton button;
-
+    // Presenter
     DetailActivity activity;
 
-    public DetailView(DetailActivity act){
+    // 위젯 연결
+    EditText memo;
+    FloatingActionButton button;
+    Toolbar toolbar;
 
-        activity = act;
+    public DetailView(DetailActivity activity){
+        this.activity = activity;
+    }
+
+    public void init(){
+        toolbar = (Toolbar) activity.findViewById(R.id.toolbar);
+        activity.setSupportActionBar(toolbar);
 
         memo = (EditText) activity.findViewById(R.id.editText);
-        Toolbar toolbar = (Toolbar) activity.findViewById(R.id.toolbar);
-
-        activity.setSupportActionBar(toolbar);
 
         button = (FloatingActionButton) activity.findViewById(R.id.fab);
 
